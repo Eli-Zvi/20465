@@ -1,0 +1,17 @@
+Please type in a number between 0 and 4294967295
+The number you typed in is: 1099456526
+
+Please type in the number of rotations you want to make, if the number is negative the rotations will be to the left
+The number of rotations are: 5
+
+the number in binary is: 01000001100010000110000000001110
+the number in octal representation: 10142060016
+the number in hexadecimal representation: 0x4188600E
+the number in decimal: 1099456526
+
+Rotation succesful, the new number will be displayed in the different bases
+
+the number in binary is: 01110010000011000100001100000000
+the number in octal representation: 16203041400
+the number in hexadecimal representation: 0x720C4300
+the number in decimal: 1913406208
