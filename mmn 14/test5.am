@@ -1,0 +1,28 @@
+;this file will test macros
+
+
+
+.entry label
+
+.extern LOOP
+
+label: mov LOOP,r3
+
+
+
+
+mov r4,r3
+
+mov r5 ,    r6
+
+mov label,       r3
+
+
+
+.string "abcdef"
+
+
+
+jmp LOOP(r4,#1)
+
+

@@ -1,0 +1,36 @@
+; errors inside the macro body
+
+
+
+
+jmp            label     ( #1, r3)
+
+
+
+
+
+
+.string "abcdef
+
+jmp label( #1, label)
+
+jmp LOOP(#1,label)  r3
+
+
+
+.data --9,,5,,2,4
+mov r9, r5
+
+
+
+
+
+
+red
+cmp
+
+mov
+mov r4
+
+cmp r3
+
