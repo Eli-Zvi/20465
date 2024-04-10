@@ -1,0 +1,23 @@
+All integers should be between 0-511 otherwise the program will be terminated
+if no integer is given the program will treat it as 0
+if the sum of the length and one of the indexes is bigger than the length of the string the program will be terminated
+String input should be 512 characters long at most, any characters after will be ignored
+
+Please type in the number of bytes you want to compare
+
+Please type in the first index
+
+Please type in the second index
+
+Please type in a string
+
+The number of bytes to be checked are:9
+The first index is:0
+The second index is:8
+The string is:40azxsdf40azxsdf43sdqweqesdzxzx
+
+The bytes that will be compared are:
+#1:40azxsdf4
+#2:40azxsdf4
+
+The bytes are equal

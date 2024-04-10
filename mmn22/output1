@@ -1,0 +1,219 @@
+Hello, welcome to My Set!
+In this program you can create and perform operations on sets!
+If you want to see the list of commands and their formats with an explanation enter 0
+otherwise enter 1
+List of Commands:
+SETA/SETA/SETC is a set given by the user from the list of sets (SETA-SETF), command names have to be lower letter and set names have to be capitalized
+When typed in the commands have to match the formats(excluding white spaces) as listed below otherwise an error message will be displayed
+
+read_set SETA, list of integers - assigns the list of ints to the given set, integers need to be separated by commas
+print_set SETA
+union_set SETA,SETB,SETC - SETC = SETA U SETB
+intersect_set SETA,SETB,SETC - SETC = SETA ∩ SETB
+sub_set SETA,SETB,SETC - SETC = SETA - SETB
+symdiff_set SETA,SETB,SETC - SETC = (SETA U SETB) - (SETA ∩ SETB)
+stop - will stop the program
+
+Please type a command
+
+Your input is: read_set SETA, 50,61, 63  , 65 , 69 , 42 -1
+Missing comma
+
+Please type a command
+
+Your input is: read_set SETB, 5, 4, 3, 2, 9, 1, 2 , 3 , 4, -1
+
+operation done successfully
+
+Please type a command
+
+Your input is: read_set SETC,54,21,0,9,55,-1
+
+operation done successfully
+
+Please type a command
+
+Your input is: read_set SETD      ,20,10,59,120,100,-1
+
+operation done successfully
+
+Please type a command
+
+Your input is: read_set SETE      ,20,10,59,120,100,-1
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETA
+The set is empty
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETB
+The set is: 
+1 2 3 4 5 9 
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETC
+The set is: 
+0 9 21 54 55 
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETD
+The set is: 
+10 20 59 100 120 
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETE
+The set is: 
+10 20 59 100 120 
+
+operation done successfully
+
+Please type a command
+
+Your input is: read_set    SETA , 21 , 59, 42,127 , 67,-1
+
+operation done successfully
+
+Please type a command
+
+Your input is: union_set SETE, SETB, SETD
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETD
+The set is: 
+1 2 3 4 5 9 10 20 59 100 120 
+
+operation done successfully
+
+Please type a command
+
+Your input is: intersect_set SETA, SETB, SETE
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETE
+The set is empty
+
+operation done successfully
+
+Please type a command
+
+Your input is: sub_set SETA, SETD, SETF
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETF
+The set is: 
+21 42 67 127 
+
+operation done successfully
+
+Please type a command
+
+Your input is: intersect_set SETD, SETC, SETD
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETD
+The set is: 
+9 
+
+operation done successfully
+
+Please type a command
+
+Your input is: union_set SETC, SETC, SETE
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETE
+The set is: 
+0 9 21 54 55 
+
+operation done successfully
+
+Please type a command
+
+Your input is: intersect_set SETF, SETA, SETB
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETB
+The set is: 
+21 42 67 127 
+
+operation done successfully
+
+Please type a command
+
+Your input is: union_set SETD, SETC, SETC
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETC
+The set is: 
+0 9 21 54 55 
+
+operation done successfully
+
+Please type a command
+
+Your input is: sub_set SETC,SETC,SETC
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETC
+The set is empty
+
+operation done successfully
+
+Please type a command
+
+Your input is: union_set  SETA  , SETC , SETF
+
+operation done successfully
+
+Please type a command
+
+Your input is: print_set SETF
+The set is: 
+21 42 59 67 127 
+
+operation done successfully
+
+Please type a command
+
+Your input is: stop
+stop
+program will now exit

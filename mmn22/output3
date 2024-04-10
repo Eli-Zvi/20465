@@ -1,0 +1,226 @@
+Hello, welcome to My Set!
+In this program you can create and perform operations on sets!
+If you want to see the list of commands and their formats with an explanation enter 0
+otherwise enter 1
+List of Commands:
+SETA/SETA/SETC is a set given by the user from the list of sets (SETA-SETF), command names have to be lower letter and set names have to be capitalized
+When typed in the commands have to match the formats(excluding white spaces) as listed below otherwise an error message will be displayed
+
+read_set SETA, list of integers - assigns the list of ints to the given set, integers need to be separated by commas
+print_set SETA
+union_set SETA,SETB,SETC - SETC = SETA U SETB
+intersect_set SETA,SETB,SETC - SETC = SETA ∩ SETB
+sub_set SETA,SETB,SETC - SETC = SETA - SETB
+symdiff_set SETA,SETB,SETC - SETC = (SETA U SETB) - (SETA ∩ SETB)
+stop - will stop the program
+
+Please type a command
+
+Your input is:   , read_set SETB, 50   ,   120,   0,  -1       
+Illegal comma
+
+Please type a command
+
+Your input is:  
+Undefined command name
+
+Please type a command
+
+Your input is: read_set 	 	,  	 	SETA, 13, 15 ,13,14 ,   	-1
+Illegal comma
+
+Please type a command
+
+Your input is: read_set, SETD,12,-1
+Illegal comma
+
+Please type a command
+
+Your input is: intersect_set SETF SETD SETA
+Missing comma
+
+Please type a command
+
+Your input is: symdiff_set, SETF, SETB, SETA
+Illegal comma
+
+Please type a command
+
+Your input is: read_set ,SETA,-1
+Illegal comma
+
+Please type a command
+
+Your input is: read_set setA, 3, 6, 5, 4, 4, -1
+Undefined set name
+
+Please type a command
+
+Your input is: sub_set SETF, , SETD, SETA
+Multiple consecutive commas
+
+Please type a command
+
+Your input is: read_set SETA, 45, 56, 45, 34
+List of set members is not terminated correctly
+
+Please type a command
+
+Your input is: read_set SETA,  	 	,12,13,-1
+Multiple consecutive commas
+
+Please type a command
+
+Your input is: UNION_set SETA, SETB, SETC
+Undefined command name
+
+Please type a command
+
+Your input is: read_set SETA , 12, ,13, -1
+Multiple consecutive commas
+
+Please type a command
+
+Your input is: read_set SETA, 12, -1,
+Extraneous text after end of command
+May be caused by list of members not being terminated correctly if the command was read_set or text after the last parameter or a missing parameter
+
+Please type a command
+
+Your input is: read_set SETA, 12,13
+List of set members is not terminated correctly
+
+Please type a command
+
+Your input is: read_set SETB, 45, 567, 34, -1
+Invalid set member – value out of range
+
+Please type a command
+
+Your input is: read_set SETA ,12 ,13, xyz, -1
+Invalid set member – not an integer
+
+Please type a command
+
+Your input is: read_set SETA 13, -1
+Missing comma
+
+Please type a command
+
+Your input is: print_set SETC, SETD
+Extraneous text after end of command
+
+Please type a command
+
+Your input is: read_set SETB, 5, 4, 3, 2, 78, 45, 43, -1,2
+Extraneous text after end of command
+
+Please type a command
+
+Your input is: read_set SETA, 45, 2, xyz, 34, -1
+Invalid set member – not an integer
+
+Please type a command
+
+Your input is: union_set SETC, SETA, SETB,
+Extraneous text after end of command
+May be caused by list of members not being terminated correctly if the command was read_set or text after the last parameter or a missing parameter
+
+Please type a command
+
+Your input is: read_set SETA, 45 ,-3, 2, 45, 34, -1
+Invalid set member – value out of range
+
+Please type a command
+
+Your input is: read_set SETG, 3, 6, 5, 4, 4, -1
+Undefined set name
+
+Please type a command
+
+Your input is: print_set SETA ,
+Extraneous text after end of command
+May be caused by list of members not being terminated correctly if the command was read_set or text after the last parameter or a missing parameter
+
+Please type a command
+
+Your input is: print_set ,SETB
+Illegal comma
+
+Please type a command
+
+Your input is: print_set
+Missing parameter
+
+Please type a command
+
+Your input is: read_set SETA, 41, 23, 6, 7, 4,
+Extraneous text after end of command
+May be caused by list of members not being terminated correctly if the command was read_set or text after the last parameter or a missing parameter
+
+Please type a command
+
+Your input is: read_set SETA, 45, 2, 24.0, 34, -1
+Illegal character
+
+Please type a command
+
+Your input is: union_set SETA SETB, SETD
+Missing comma
+
+Please type a command
+
+Your input is: intersect_set SETA, SETB SETE
+Missing comma
+
+Please type a command
+
+Your input is: read,set SETA,32   , 23     11, 44,-1
+Illegal comma
+
+Please type a command
+
+Your input is: sub_set SETA, SETB, , SETF
+Multiple consecutive commas
+
+Please type a command
+
+Your input is: intersect_set SETA, SETC,
+Extraneous text after end of command
+May be caused by list of members not being terminated correctly if the command was read_set or text after the last parameter or a missing parameter
+
+Please type a command
+
+Your input is: intersect_set
+Missing parameter
+
+Please type a command
+
+Your input is: do_it SETA, SETB, SETC
+Undefined command name
+
+Please type a command
+
+Your input is: read_set SETE, 5, 4, 3, 2, 78, 45, 4.3, -1,2
+Illegal character
+
+Please type a command
+
+Your input is: read_set SETA, 14, 128, 0, -1
+Invalid set member – value out of range
+
+Please type a command
+
+Your input is: union_set SETC, SETA
+Missing parameter
+
+Please type a command
+
+Your input is: stop 23
+Extraneous text after end of command
+
+Please type a command
+
+Your input is: stop
+stop
+program will now exit

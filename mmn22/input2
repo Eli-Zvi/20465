@@ -1,0 +1,28 @@
+read_set SETA,6,8,89,13,17,20,50,60,101,-1
+read_set SETB,9,10,15,20,30,80,23,11,1,0,-1
+read_set SETC,83,91,0,127,120,110,55,44,-1
+read_set SETD,73,23,21,50,0,20,11,33,44,-1
+read_set SETF,2,3,4,72,27,10,32,47,59,60,-1
+print_set SETA
+print_set SETB
+print_set SETC
+print_set SETD
+print_set SETF
+union_set SETA,SETB,SETA
+union_set SETA,SETC,SETA
+union_set SETA,SETD,SETA
+union_set SETA,SETE,SETA
+union_set SETA,SETF,SETA
+print_set SETA
+intersect_set SETB,SETC,SETE
+sub_set SETA,SETB,SETA
+sub_set SETA,SETC,SETA
+sub_set SETA,SETD,SETA
+sub_set SETA,SETE,SETA
+sub_set SETA,SETF,SETA
+print_set SETA
+read_set SETB,5,8,9,10,20,50,21,60,-1
+symdiff_set SETA,SETB,SETE
+print_set SETE
+stop
+
