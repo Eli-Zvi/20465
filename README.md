@@ -11,5 +11,3 @@ This project is an assembler written in C for a custom assembly language. It rea
 - Modular design for readability and maintainability
   
 - Includes example input files and expected outputs
-  
-- Well-documented code
