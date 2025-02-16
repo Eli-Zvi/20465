@@ -11,3 +11,11 @@ This project is an assembler written in C for a custom assembly language. It rea
 - Translate assembly instructions into binary machine code.
 
 - Output the resulting machine code in a specified format.
+
+## **How to Use**
+
+- Write an assembly program using the defined syntax.
+  
+- Run the assembler to translate the code into machine code.
+  
+- Load the machine code into the imaginary CPU for execution.
