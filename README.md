@@ -5,9 +5,9 @@ This project is an assembler written in C for a custom assembly language. It rea
 ## **Features**
 
 - Parses a custom assembly language
-  
-- Generates executable machine code
-  
-- Modular design for readability and maintainability
-  
-- Includes example input files and expected outputs
+
+- Validate syntax and operand types.
+
+- Translate assembly instructions into binary machine code.
+
+- Output the resulting machine code in a specified format.
