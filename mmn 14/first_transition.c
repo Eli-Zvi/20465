@@ -227,7 +227,7 @@ void searchLine(char buff[], FILE *file)
         instructionNumber = getInstructionType(instructionCode);
 
         if (instructionNumber > 13)
-        {
+        { /* instructions 14,15 do not look for any parameters */
             if(!validateEnding())
             {
                 /* error */
@@ -249,6 +249,8 @@ void searchLine(char buff[], FILE *file)
         }
         else
         {
+            /* for each instruction, get its parameters, validate them, and check for user errors
+                such as improperly defined params too many commas and more */
             if(instructionNumber != 9 && instructionNumber != 10 && instructionNumber != 13) {
                 operand1 = findOperand(&operandType1, NULL, 1);
 
@@ -315,8 +317,8 @@ void searchLine(char buff[], FILE *file)
                         /* error */
                         goto error;
                     }
-
-                    if((operand1 != NULL && operand2 == NULL) || (operandType1 == 1 && !verifyParameters(operand1)) || (operandType2 == 1 && !verifyParameters(operand2))) /* used to catch edge cases */
+                   
+                    if((operand1 != NULL && operand2 == NULL) || (operandType1 == 1 && !verifyParameters(operand1)) || (operandType2 == 1 && !verifyParameters(operand2))) 
                     {
                         /* error, only 1 param found or illegal params */
                         errCode = 10;
@@ -339,7 +341,7 @@ void searchLine(char buff[], FILE *file)
         }
 
         if(label)
-        {
+        { /* if a label has been found, add to label list */
             newNode->type = 0;
             newNode->next = NULL;
             newNode->code = NULL;
