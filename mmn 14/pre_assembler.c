@@ -201,7 +201,7 @@ int checkMacro(char string [], mcr *macroList[], int n)
 
         while (i < n) {
 
-            temp = strstr(string, macroList[i]->name);
+            temp = strstr(string, macroList[i]->name); /* checks if macroList[i]->name is in the line */
 
 	    /* if temp is null macroList[i]->name is not a substring, otherwise we check that temp 
      		and macroList[i]->name are identical */
