@@ -1559,7 +1559,9 @@ char* convertToBinary(int dec, int n, int overflow)
 
 }
 
-/* checks if there is any non white space chars after the last parameter */
+/* checks if there is any non white space chars after the last parameter 
+*  @return 0 if it is not valid, 1 if it is
+*/
 int validateEnding()
 {/* double check if \n is needed */
     if(strtok(NULL,"' '\t\r\v\f\n"))
