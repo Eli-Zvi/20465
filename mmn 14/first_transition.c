@@ -1166,11 +1166,11 @@ char* searchString(char buff[])
         len = strlen(temp);
 
         for (i = 0; i < len; i++) {
-            if (isspace(temp[i])) {
+            if (isspace(temp[i])) { /* remove trailing spaces */
                 temp++;
                 len--;
                 i--;
-            } else if (temp[i] == '"') {
+            } else if (temp[i] == '"') { /* found opening quotation mark */
                 temp++;
                 break;
             } else {
@@ -1182,7 +1182,7 @@ char* searchString(char buff[])
             return NULL;
 
         for (i = 0; i < len; i++) {
-            if (temp[i] == '"') {
+            if (temp[i] == '"') { /* found closing quotation mark */
                 flag = 0;
                 indexOfLastQuotation = i;
             } else if (temp[i] != '"' && !isspace(temp[i]) && temp[i] != '\0') {
