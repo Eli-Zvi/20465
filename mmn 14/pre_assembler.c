@@ -203,7 +203,8 @@ int checkMacro(char string [], mcr *macroList[], int n)
 
             temp = strstr(string, macroList[i]->name);
 
-	    /* if temp is null macroList[i]->name is not a substring, otherwise we check that temp and macroList[i]->name are identical */
+	    /* if temp is null macroList[i]->name is not a substring, otherwise we check that temp 
+     		and macroList[i]->name are identical */
             if ((temp && strncmp(temp, macroList[i]->name, strlen(macroList[i]->name)) == 0))
                 if(strlen(temp) == strlen(macroList[i]->name) || isspace(temp[strlen(macroList[i]->name)]))
                     return i;
