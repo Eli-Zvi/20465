@@ -1132,7 +1132,7 @@ char* checkData(char buff[], char **instruction)
     char* temp;
 
     if(!buff)
-         temp = strtok(NULL,"' '\t\v\r\f\n");
+         temp = strtok(NULL,"' '\t\v\r\f\n"); /* continues from the last point we stopped from with strtok */
     else temp = strtok(buff, "' '\t\v\r\f\n");
 
     if(temp != NULL) {
