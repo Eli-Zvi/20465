@@ -1100,9 +1100,9 @@ int findUserError(int operandType1, int operandType2, int numberOfCommas)
 }
 
 /*
- * checks if the : character is in the line and its not a part of a string that belongs to a .string dec
+ * checks if the ':' character is in the line and its not a part of a string that belongs to a .string declaration
  * @param buff - the line to be checked
- * returns 1 if : is found within the line
+ * returns 1 if ':' is found within the line
  * returns 0 if it is not found
  */
 int checkLabel(char buff[])
