@@ -908,6 +908,7 @@ int writeMachineCode(int instructionNumber,char* instructionCode, char* operand1
             break;
     }
 
+    /* writes the pc number and operand binary code to file */ 
     writeOperands(operandType1,operandType2,operand1,operand2,file);
 
     /* frees allocated strings */
