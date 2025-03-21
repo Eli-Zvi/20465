@@ -1316,7 +1316,7 @@ int validateDataType(char type[])
 }
 
 /*
- * checks if the label was declared according to instructions
+ * checks if the label was declared according to instructions/rules
  * @param buff - the string that will be checked
  * @param type - 0 -> jmp/jsr/bne type instruction 1-> others
  * @return 0 -> error 1 -> success
