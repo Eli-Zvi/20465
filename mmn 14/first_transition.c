@@ -1009,7 +1009,7 @@ char* findOperand(int *result, char buff[], int type)
             }
             return findRegister(operand);
         }
-        else if(strcmp(temp,"d") == 0)
+        else if(strcmp(temp,"d") == 0) /* checks if the register that is found is illegaly defined */
         {
             errCode = 21;
             return NULL;
@@ -1399,7 +1399,7 @@ char *findOperandType(char buff[])
     if(buff) {
         temp = findRegister(buff); /* checks if its a register */
 
-        if (strchr(buff, '#'))
+        if (strchr(buff, '#')) /* a number */
             return "#";
         else if (temp && strcmp(temp,"d") == 0){ /* checks if the register that is found is illegaly defined */
             return "d";
