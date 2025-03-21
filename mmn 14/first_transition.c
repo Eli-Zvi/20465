@@ -4,8 +4,8 @@
 #include <string.h>
 #include <stdlib.h>
 #define MAX_LENGTH 82 /* MAX LENGTH is 82 because of null termination character */
-#define NUM_OF_OPCODES 16
-#define NUM_OF_REGS 8
+#define NUM_OF_OPCODES 16 /* NUMBER OF DIFFERENT OPERATION CODES */
+#define NUM_OF_REGS 8 /* NUMBER OF DIFFERENT REGISTERS */
 #define PC (IC+DC+100)
 
 /* NOTE:
