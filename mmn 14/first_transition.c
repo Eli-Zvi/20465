@@ -1437,7 +1437,7 @@ int getInstructionType(char buff[])
 }
 
 /*
- * scans buff and finds the register that corresponds to it
+ * scans buff and finds the register number in binary that corresponds to it
  * @param buff - the string to be compared
  * returns the register number in binary
  */
