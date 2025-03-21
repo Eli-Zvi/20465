@@ -6,9 +6,9 @@
 #define MAX_LENGTH 82 /* MAX LENGTH is 82 because of null termination character */
 
 struct mcr{
-    char *name;
-    char **string;
-    int n;
+    char *name; /* the name of the mcr */
+    char **string; /* an array of strings that are in the mcr */
+    int n; /* number of lines in the mcr */
 };
 
 /*
