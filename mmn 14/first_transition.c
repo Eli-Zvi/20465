@@ -205,6 +205,7 @@ void searchLine(char buff[], FILE *file)
         }
     }
 
+    /* checks if its a data with a label or without*/
     if((label && (dataType = checkData(NULL, &instructionCode))) || (!label && (dataType = checkData(buff,&instructionCode))))
     {
         flag = validateDataType(dataType); /* flag = 0 -> error, flag = 1 -> data, flag = 2 -> string, flag = 3 -> entry, flag = 4 -> extern */
