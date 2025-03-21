@@ -169,7 +169,7 @@ void searchLine(char buff[], FILE *file)
             temp++;
         }
 
-        if(!validateEntryExtern(temp,0))
+        if(!validateEntryExtern(temp,0)) /* loop through entry and extern list to check for any clashing declarations */
             return;
 
         if(validateLabel(temp,0))
