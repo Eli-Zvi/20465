@@ -19,7 +19,7 @@ struct node {
     char *name;
     int pc;
     int type; /* 0 - declared in file 0 - neither entry - 1 extern  - 2 */
-    int numberOfCodes;
+    int numberOfCodes; /* for data node */
     char **code; /* used to save data machine code */
     struct node *next;
 };
@@ -380,7 +380,7 @@ void searchLine(char buff[], FILE *file)
  *
  * @param flag - denotes the type of data
  * @param numberOfCommas - the number of commas in the line
- * @param node - a node that may contain a label in it, NULL if no label wasn't found initially
+ * @param node - a node that may contain a label in it, NULL if no label was found initially
  *
  * returns -1 on failure
  * returns 0 on success
@@ -415,6 +415,7 @@ int storeData(int flag,int numberOfCommas, node *newNode)
                     return -1;
                 }
 
+                /* allocates space for the variable/data */
                 if(allocated == 0)
                 {
                     allocArr = (char**) malloc (sizeof(char*) * 10);
@@ -446,7 +447,7 @@ int storeData(int flag,int numberOfCommas, node *newNode)
                     free(allocArr);
                     return -1;
                 }
-                else {
+                else { /* store variable/data */
                     allocateAble[14] = '\0';
                     allocArr[allocated] = allocateAble;
                     allocated++;
@@ -454,8 +455,8 @@ int storeData(int flag,int numberOfCommas, node *newNode)
             }
             while ((temp = searchData()));
 
-
-            if(numberOfCommas >= allocated) /* there should be n-1 commas if there are n datum */
+            /* there should be n-1 commas if there are n datum(3,5,7 has 2 commas) */
+            if(numberOfCommas >= allocated) 
             {
                 i = 0;
                 while(i < allocated)
@@ -468,7 +469,7 @@ int storeData(int flag,int numberOfCommas, node *newNode)
                 return -1;
             }
 
-            if(!newNode)
+            if(!newNode) /* nameless data */
             {
                 newNode = (node*)malloc(sizeof(node));
                 if(!newNode)
@@ -532,14 +533,14 @@ int storeData(int flag,int numberOfCommas, node *newNode)
             }
             while (len >= i);
 
-            if(!newNode) {
+            if(!newNode) { /* nameless data */
                 newNode = (node *) malloc(sizeof(node));
                 if (!newNode) {
                     /*error*/
                     fprintf(stderr, "memory allocation error");
                     exit(-1);
                 }
-                newNode->name = NULL;
+                newNode->name = NULL; 
             }
             newNode->numberOfCodes = allocated;
             newNode->code = allocArr;
@@ -615,6 +616,8 @@ int storeData(int flag,int numberOfCommas, node *newNode)
     }
 
     newNode->next = NULL;
+    
+    /* attaches new data to its linked list */
     if(flag < 3)
     {
         if(dataHead)
