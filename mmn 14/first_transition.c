@@ -160,7 +160,7 @@ void searchLine(char buff[], FILE *file)
     
     numberOfCommas = findNumberOfCommas(buff);
 
-    if(checkLabel(buff))
+    if(checkLabel(buff)) /* if a ':' was found in checkLabel, we've found a label*/
     { /* find the label's name and store it */
         temp = strtok(buff,":"); /* if we've found a label get its name */
 
