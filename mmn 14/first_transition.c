@@ -396,8 +396,9 @@ int storeData(int flag,int numberOfCommas, node *newNode)
         if((temp = searchData())) /* get next int */
         {
             do
-            {
-                if(!validateNumber(temp,1))
+            {   /* validates that number follows syntax according to instruction and 
+                    general rules(such as no spaces after a number)*/
+                if(!validateNumber(temp,1)) 
                 {
                     errCode = 2;
                     if(allocArr)
