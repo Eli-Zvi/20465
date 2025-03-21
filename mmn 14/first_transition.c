@@ -1521,13 +1521,13 @@ char *findOpCode(char command[])
  * @param dec - a number
  * @param n - the length of the binary string to be returned
  * @param overflow - determines if overflow should be taken into consideration
- * returns NULL if overflow happens and the overflow flag is on
+ * returns the binary representation of dec, NULL if overflow happens and the overflow flag is on
  */
 char* convertToBinary(int dec, int n, int overflow)
 {
     char *temp;
     int i,mask,limit;
-    limit = pow(2,n-1);
+    limit = pow(2,n-1); /* the biggest and smallest numbers possible 2^(n - 1) and -2^n */
 
     if(overflow && ((dec > (limit-1)) || (dec < (-1 * limit)))) {
         errCode = 20;
