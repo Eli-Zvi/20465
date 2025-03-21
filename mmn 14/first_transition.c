@@ -1314,6 +1314,7 @@ int validateDataType(char type[])
  * checks if the label was declared according to instructions
  * @param buff - the string that will be checked
  * @param type - 0 -> jmp/jsr/bne type instruction 1-> others
+ * @return 0 -> error 1 -> success
  */
 int validateLabel(char buff[],int type)
 {
@@ -1323,17 +1324,18 @@ int validateLabel(char buff[],int type)
     if(buff) {
         length = strlen(buff);
 
-        for (i = 0; i < NUM_OF_OPCODES; i++) { /* check that the label is not a saved name */
+        for (i = 0; i < NUM_OF_OPCODES; i++) { /* check that the label is not a saved op name */
             if (strcmp(buff, oparr[i].name) == 0)
                 return 0;
         }
 
-        for (i = 0; i < NUM_OF_REGS; i++) { /* check that the label is not a saved name */
+        for (i = 0; i < NUM_OF_REGS; i++) { /* check that the label is not a saved reg name */
             if (strcmp(buff, regarr[i]) == 0)
                 return 0;
         }
 
-        if (strcmp(buff, "string") == 0 || strcmp(buff, "data") == 0 || strcmp(buff, "entry") == 0 || strcmp(buff,"extern") == 0) /* check that the label is not a saved name */
+        /* check that the label is not a saved name */
+        if (strcmp(buff, "string") == 0 || strcmp(buff, "data") == 0 || strcmp(buff, "entry") == 0 || strcmp(buff,"extern") == 0) 
             return 0;
 
         if (length < 31) { /* a label can be 30 letters long at most */
